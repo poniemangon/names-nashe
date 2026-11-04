@@ -1,0 +1,100 @@
+.main {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 16px;
+  font-family: var(--font-geist-sans);
+}
+
+.titulo {
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.tab {
+  padding: 10px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tab[aria-pressed="true"] {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.formato {
+  margin: 16px 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.lista {
+  list-style: none;
+  margin-bottom: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.lista li {
+  border-bottom: 1px solid var(--border);
+}
+
+.nombre {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  width: 100%;
+  padding: 14px 4px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 18px;
+  text-align: left;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.accion {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.generar {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--foreground);
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .nombre:hover {
+    background: var(--surface);
+  }
+
+  .generar:hover {
+    background: var(--foreground);
+    color: var(--background);
+  }
+}
